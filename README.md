@@ -2,7 +2,7 @@
 
 [![FIWARE IoT Agents](https://nexus.lab.fiware.org/static/badges/chapters/iot-agents.svg)](https://www.fiware.org/developers/catalogue/)
 [![License: AGPL](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://opensource.org/licenses/AGPL-3.0)
-[![Docker badge](https://img.shields.io/badge/quay.io-fiware%2Fiotagent--opcua-grey?logo=red%20hat&labelColor=EE0000)](https://quay.io/repository/fiware/iotagent-aas)
+[![Docker badge](https://img.shields.io/badge/quay.io-fiware%2Fiotagent--aas-grey?logo=red%20hat&labelColor=EE0000)](https://quay.io/repository/fiware/iotagent-aas)
 [![Support badge](https://img.shields.io/badge/support-stackoverflow-orange)](https://stackoverflow.com/questions/tagged/fiware+iot)<br/>
 [![Documentation badge](https://img.shields.io/readthedocs/iotagent-aas.svg)](https://iotagent-aas.rtfd.io/)
 [![CI](https://github.com/Engineering-Research-and-Development/iotagent-aas/workflows/CI/badge.svg)](https://github.com/Engineering-Research-and-Development/iotagent-aas/actions?query=workflow%3ACI)
@@ -131,7 +131,7 @@ establish a secure connection to the AAS Server.
 
 ### How to get access to the advanced API and Documentation topics
 
-Documentation about the AAS Administration API can be found [here](https://iotagentopcua.docs.apiary.io/)
+Documentation about the AAS Administration API can be found [here](https://iotagentaas.docs.apiary.io/)
 
 ## Quality Assurance
 
