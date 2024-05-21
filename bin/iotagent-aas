@@ -38,7 +38,7 @@ function start() {
     if (process.argv.length === 3) {
         config = require('../' + process.argv[2]);
     } else {
-        config = require('../config');
+        config = require('../conf/config');
     }
 
     config.iota.iotaVersion = info.version;
@@ -47,7 +47,7 @@ function start() {
         if (error) {
             logger.error(context, 'Error starting IoT Agent - JSON: [%s] Exiting process', error);
         } else {
-            logger.info(context, 'IoT Agent JSON started');
+            logger.info(context, 'IoT Agent AAS started');
         }
     });
 }

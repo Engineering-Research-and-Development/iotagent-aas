@@ -262,9 +262,48 @@ config.iota = {
      *
      *      https://github.com/Engineering-Research-and-Development/iotagent-aas#type-configuration
      */
-    types: {},
+    types: {
+        TicketManagement: {
+            active: [],
+            lazy: [
+                {
+                    name: 'TicketsCount',
+                    type: 'Number'
+                },
+                {
+                    name: 'PassiveTicketsCount',
+                    type: 'Number'
+                },
+                {
+                    name: 'ActiveTicketsCount',
+                    type: 'Number'
+                }
+            ],
+            commands: []
+        }
+    },
     contexts: [],
-    contextSubscriptions: [],
+    contextSubscriptions: [
+        {
+            id: 'ticketmgmt01',
+            type: 'TicketManagement',
+            submodel_short_id: 'TicketManagement',
+            mappings: [
+                {
+                    ocb_id: 'TicketsCount',
+                    submodel_element_short_id: 'TicketsCount'
+                },
+                {
+                    ocb_id: 'PassiveTicketsCount',
+                    submodel_element_short_id: 'PassiveTicketsCount'
+                },
+                {
+                    ocb_id: 'ActiveTicketsCount',
+                    submodel_element_short_id: 'ActiveTicketsCount'
+                }
+            ]
+        }
+    ],
     /**
      * Default service, for IoT Agent installations that won't require preregistration.
      */
