@@ -10,17 +10,17 @@
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/4612/badge)](https://bestpractices.coreinfrastructure.org/projects/4612)
 ![Status](https://nexus.lab.fiware.org/static/badges/statuses/full.svg)
 [![Join the chat at https://gitter.im/iotagent-aas/community](https://badges.gitter.im/iotagent-aas/community.svg)](https://gitter.im/iotagent-aas/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-<br/> <img align="right" width="200" src="/docs/images/iotagent-logo.png" />
+<br/> <img align="right" width="150" src="/docs/images/iotagent-logo.png" />
 
-An Internet of Things Agent accepting data from AAS devices. This IoT Agent is designed to be a bridge between the
-OPC Unified Architecture protocol and the
+An Internet of Things Agent accepting data from AAS devices. This IoT Agent is designed to be a bridge between the OPC
+Unified Architecture protocol and the
 [NGSI](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/Fiware/specifications/master/OpenAPI/ngsiv2/ngsiv2-openapi.json)
 interface of a context broker.
 
 The intended level of complexity to support these operations should consider a limited human intervention (mainly during
-the setup of a new AAS endpoint), through the mean of a parametrization task (either manual or semi-automatic, using
-a text-based parametrization or a simple UI to support the configuration) so that no software coding is required to
-adapt the agent to different AAS devices.
+the setup of a new AAS endpoint), through the mean of a parametrization task (either manual or semi-automatic, using a
+text-based parametrization or a simple UI to support the configuration) so that no software coding is required to adapt
+the agent to different AAS devices.
 
 It is based on the [IoT Agent Node.js Library](https://github.com/telefonicaid/iotagent-node-lib). Further general
 information about the FIWARE IoT Agents framework, its architecture and the common interaction model can be found in the
@@ -30,7 +30,7 @@ This project is part of [FIWARE](https://www.fiware.org/). For more information 
 [FIWARE Catalogue entry for the IoT Agents](https://github.com/Fiware/catalogue/tree/master/iot-agents).
 
 | :books: [Documentation](https://iotagent-aas.rtfd.io) | <img style="height:1em" src="https://quay.io/static/img/quay_favicon.png"/> [quay.io](https://quay.io/repository/fiware/iotagent-aas) | :mortar_board: [Academy](https://fiware-academy.readthedocs.io/en/latest/iot-agents/idas) | :dart: [Roadmap](https://github.com/Engineering-Research-and-Development/iotagent-aas/blob/master/roadmap.md) |
-| ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
 
 
 ## Contents
@@ -126,8 +126,8 @@ For checking current status of the Agent, send a request to /version service
 
 ### Secure connection with an AAS Server
 
-AAS Agent will automatically generate key pairs and certificates (persisted in `iotagent-aas/certificates`) to
-establish a secure connection to the AAS Server.
+AAS Agent will automatically generate key pairs and certificates (persisted in `iotagent-aas/certificates`) to establish
+a secure connection to the AAS Server.
 
 ### How to get access to the advanced API and Documentation topics
 
