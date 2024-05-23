@@ -80,7 +80,8 @@
     "nodemon": "^2.0.19",
     "rewire": "^6.0.0",
     "sinon": "~6.1.0",
-    "underscore": "1.12.1"
+    "underscore": "1.12.1",
+    "uuid": "^9.0.1"
   },
   "husky": {
     "hooks": {
