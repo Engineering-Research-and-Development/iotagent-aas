@@ -12,8 +12,8 @@
 [![Join the chat at https://gitter.im/iotagent-aas/community](https://badges.gitter.im/iotagent-aas/community.svg)](https://gitter.im/iotagent-aas/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 <br/> <img align="right" width="150" src="/docs/images/iotagent-logo.png" />
 
-An Internet of Things Agent accepting data from AAS devices. This IoT Agent is designed to be a bridge between the OPC
-Unified Architecture protocol and the
+An Internet of Things Agent accepting data from AAS devices. This IoT Agent is designed to be a bridge between the AAS
+(Asset Administration Shell) and the
 [NGSI](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/Fiware/specifications/master/OpenAPI/ngsiv2/ngsiv2-openapi.json)
 interface of a context broker.
 
@@ -55,8 +55,8 @@ executed in the proximity of IoT devices and that are responsible for bridging a
 standard (e.g. the IDAS distribution includes off-the-shelf Agents for LwM2M and MQTT). To this end, IDAS links the NGSI
 southbound API of the FIWARE Orion Context Broker to the northbound API of the IoT application stack, by providing a
 software library (the IoT Agent Lib depicted in the previous figure) for developing custom Agents that may extend the
-bridging capabilities of IDAS to other protocols. The F4I IDAS AAS Agent makes use of this framework to integrate OPC
-UA-based devices in a publish-subscribe system based on the FIWARE Orion Context Broker.
+bridging capabilities of IDAS to other protocols. The F4I IDAS AAS Agent makes use of this framework to integrate
+AAS-based devices in a publish-subscribe system based on the FIWARE Orion Context Broker.
 
 ## Getting Started - Install
 
@@ -65,8 +65,7 @@ Currently two options are available to install the Agent:
 ### Docker - Recommended
 
 We suggest using a **Docker-first** approach in order to avoid issues related to your environment configuration.
-Moreover, using this approach you will be provided with all the needed components: OCB, Mongo instances and a sample OPC
-UA server.
+Moreover, using this approach you will be provided with main components: OCB, Mongo, Agent instances.
 
 A step-by-step tutorial is available
 [here](https://github.com/Engineering-Research-and-Development/iotagent-aas/blob/master/docs/aas_agent_tutorial.md)

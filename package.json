@@ -1,8 +1,8 @@
 {
   "name": "iotagent-aas",
   "license": "AGPL-3.0-only",
-  "description": "IoT Agent for OPC UA protocol",
-  "version": "2.2.5",
+  "description": "IoT Agent for AAS (Asset Administration Shell)",
+  "version": "1.0.0",
   "homepage": "https://github.com/Engineering-Research-and-Development/iotagent-aas",
   "author": {
     "name": "Manfredi Giuseppe Pistone",

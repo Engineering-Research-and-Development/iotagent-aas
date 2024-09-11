@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /*
- * Copyright 2020 Telefonica Investigación y Desarrollo, S.A.U
+ * Copyright 2024 Engineering Ingegneria Informatica S.p.A.
  *
  * This file is part of iotagent-aas
  *
@@ -20,7 +20,7 @@
  * If not, seehttp://www.gnu.org/licenses/.
  *
  * For those usages not covered by the GNU Affero General Public License
- * please contact with::[contacto@tid.es]
+ * please contact with::[manfredi.pistone@eng.it, walterdomenico.vergara@eng.it]
  */
 
 const http = require('http');

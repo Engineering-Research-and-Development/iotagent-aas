@@ -1,6 +1,6 @@
-# Copyright 2022 Engineering Ingegneria Informatica S.p.A.
+# Copyright 2024 Engineering Ingegneria Informatica S.p.A.
 #
-# This file is part of the IoT Agent for the OPCUA protocol (iotagent-aas) component
+# This file is part of iotagent-aas
 #
 # iotagent-aas is free software: you can redistribute it and/or
 # modify it under the terms of the GNU Affero General Public License as
@@ -14,10 +14,11 @@
 #
 # You should have received a copy of the GNU Affero General Public
 # License along with iotagent-aas.
-# If not, see http://www.gnu.org/licenses/.
+# If not, seehttp://www.gnu.org/licenses/.
 #
 # For those usages not covered by the GNU Affero General Public License
-# please contact with::[manfredi.pistone@eng.it, gabriele.deluca@eng.it, walterdomenico.vergara@eng.it, mattiagiuseppe.marzano@eng.it]
+# please contact with::[manfredi.pistone@eng.it, walterdomenico.vergara@eng.it]
+# /
 
 ARG NODE_VERSION=16
 ARG GITHUB_ACCOUNT=Engineering-Research-and-Development
@@ -117,8 +118,8 @@ LABEL "org.opencontainers.image.authors"="walterdomenico.vergara@eng.it,manfredi
 LABEL "org.opencontainers.image.documentation"="https://iotagent-aas.readthedocs.io/en/latest/"
 LABEL "org.opencontainers.image.vendor"="Engineering Ingegneria Informatica"
 LABEL "org.opencontainers.image.licenses"="AGPL-3.0-only"
-LABEL "org.opencontainers.image.title"="IoT Agent for the OPCUA protocol"
-LABEL "org.opencontainers.image.description"="An Internet of Things Agent intended to enable capturing data from OPC UA devices on the shopfloor and provide them to the upper levels of a FIWARE-based system."
+LABEL "org.opencontainers.image.title"="IoT Agent for the AAS"
+LABEL "org.opencontainers.image.description"="An Internet of Things Agent intended to enable capturing data from AAS devices on the shopfloor and provide them to the upper levels of a FIWARE-based system."
 LABEL "org.opencontainers.image.source"="https://github.com/${GITHUB_ACCOUNT}/${GITHUB_REPOSITORY}"
 LABEL "org.nodejs.version"="${NODE_VERSION}"
 
@@ -163,8 +164,8 @@ LABEL "org.opencontainers.image.authors"="walterdomenico.vergara@eng.it,manfredi
 LABEL "org.opencontainers.image.documentation"="https://iotagent-aas.readthedocs.io/en/latest/"
 LABEL "org.opencontainers.image.vendor"="Engineering Ingegneria Informatica"
 LABEL "org.opencontainers.image.licenses"="AGPL-3.0-only"
-LABEL "org.opencontainers.image.title"="IoT Agent for the OPCUA protocol"
-LABEL "org.opencontainers.image.description"="An Internet of Things Agent intended to enable capturing data from OPC UA devices on the shopfloor and provide them to the upper levels of a FIWARE-based system."
+LABEL "org.opencontainers.image.title"="IoT Agent for the AAS"
+LABEL "org.opencontainers.image.description"="An Internet of Things Agent intended to enable capturing data from AAS devices on the shopfloor and provide them to the upper levels of a FIWARE-based system."
 LABEL "org.opencontainers.image.source"="https://github.com/${GITHUB_ACCOUNT}/${GITHUB_REPOSITORY}"
 LABEL "org.nodejs.version"="${NODE_VERSION}"
 
@@ -203,8 +204,8 @@ LABEL "org.opencontainers.image.authors"="walterdomenico.vergara@eng.it,manfredi
 LABEL "org.opencontainers.image.documentation"="https://iotagent-aas.readthedocs.io/en/latest/"
 LABEL "org.opencontainers.image.vendor"="Engineering Ingegneria Informatica"
 LABEL "org.opencontainers.image.licenses"="AGPL-3.0-only"
-LABEL "org.opencontainers.image.title"="IoT Agent for the OPCUA protocol"
-LABEL "org.opencontainers.image.description"="An Internet of Things Agent intended to enable capturing data from OPC UA devices on the shopfloor and provide them to the upper levels of a FIWARE-based system."
+LABEL "org.opencontainers.image.title"="IoT Agent for the AAS"
+LABEL "org.opencontainers.image.description"="An Internet of Things Agent intended to enable capturing data from AAS devices on the shopfloor and provide them to the upper levels of a FIWARE-based system."
 LABEL "org.opencontainers.image.source"="https://github.com/${GITHUB_ACCOUNT}/${GITHUB_REPOSITORY}"
 LABEL "org.nodejs.version"="${NODE_VERSION}"
 

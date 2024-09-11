@@ -1,17 +1,17 @@
-# FIWARE IoT Agent for the OPC-UA
+# FIWARE IoT Agent for the AAS (Asset Administration Shell)
 
 [![FIWARE IoT Agents](https://nexus.lab.fiware.org/repository/raw/public/badges/chapters/iot-agents.svg)](https://www.fiware.org/developers/catalogue/)
 [![](https://nexus.lab.fiware.org/repository/raw/public/badges/stackoverflow/iot-agents.svg)](https://stackoverflow.com/questions/tagged/fiware+iot)
 
-An Internet of Things Agent accepting data from OPC UA devices. This IoT Agent is designed to be a bridge between the
-OPC Unified Architecture protocol and the
+An Internet of Things Agent accepting data from AAS servers. This IoT Agent is designed to be a bridge between the AAS
+and the
 [NGSI](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/Fiware/specifications/master/OpenAPI/ngsiv2/ngsiv2-openapi.json)
 interface of a context broker.
 
 The intended level of complexity to support these operations should consider a limited human intervention (mainly during
-the setup of a new OPC UA endpoint), through the mean of a parametrization task (either manual or semi-automatic, using
-a text-based parametrization or a simple UI to support the configuration) so that no software coding is required to
-adapt the agent to different OPC UA devices.
+the setup of a new AAS endpoint), through the mean of a parametrization task (either manual or semi-automatic, using a
+text-based parametrization or a simple UI to support the configuration) so that no software coding is required to adapt
+the agent to different AAS servers.
 
 It is based on the [IoT Agent Node.js Library](https://github.com/telefonicaid/iotagent-node-lib). Further general
 information about the FIWARE IoT Agents framework, its architecture and the common interaction model can be found in the
@@ -48,48 +48,57 @@ services:
             - hostnet
         ports:
             - "4041:4041"
-            - "9229:9229"
+            - "7896:7896"
         environment:
+            - "DEFAULT_KEY=iot"
+            - "DEFAULT_TRANSPORT=HTTP"
             - "IOTA_LOGLEVEL=DEBUG"
             - "IOTA_TIMESTAMP=true"
             - "IOTA_CB_HOST=orion"
             - "IOTA_CB_PORT=1026"
             - "IOTA_CB_NGSIVERSION=v2"
             - "IOTA_CB_NGSILDCONTEXT=https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-            - "IOTA_CB_SERVICE=opcua_car"
+            - "IOTA_CB_SERVICE=aas_ticket"
             - "IOTA_CB_SUBSERVICE=/demo"
             - "IOTA_NORTH_PORT=4041"
             - "IOTA_REGISTRY_TYPE=mongodb"
             - "IOTA_MONGO_HOST=mongodb"
             - "IOTA_MONGO_PORT=27017"
-            - "IOTA_MONGO_DB=iotagent_opcua"
-            - "IOTA_SERVICE=opcua_car"
+            - "IOTA_MONGO_DB=iotagent_aas"
+            - "IOTA_SERVICE=aas_ticket"
             - "IOTA_SUBSERVICE=/demo"
             - "IOTA_PROVIDER_URL=http://iotagent-aas:4041"
             - "IOTA_DEVICEREGDURATION=P20Y"
             - "IOTA_DEFAULTTYPE=Device"
-            - "IOTA_DEFAULTRESOURCE=/iot/opcu"
+            - "IOTA_DEFAULTRESOURCE=/iot/aas"
             - "IOTA_EXPLICITATTRS=true"
             - "IOTA_EXTENDED_FORBIDDEN_CHARACTERS=[]"
             - "IOTA_AUTOPROVISION=true"
-            - "IOTA_OPCUA_ENDPOINT=opc.tcp://iotcarsrv:5001/UA/CarServer"
-            - "IOTA_OPCUA_SECURITY_MODE=None"
-            - "IOTA_OPCUA_SECURITY_POLICY=None"
-            #- "IOTA_OPCUA_SECURITY_USERNAME=null"
-            #- "IOTA_OPCUA_SECURITY_PASSWORD=null"
-            - "IOTA_OPCUA_UNIQUE_SUBSCRIPTION=false"
-            - "IOTA_OPCUA_SUBSCRIPTION_NOTIFICATIONS_PER_PUBLISH=1000"
-            - "IOTA_OPCUA_SUBSCRIPTION_PUBLISHING_ENABLED=true"
-            - "IOTA_OPCUA_SUBSCRIPTION_REQ_LIFETIME_COUNT=100"
-            - "IOTA_OPCUA_SUBSCRIPTION_REQ_MAX_KEEP_ALIVE_COUNT=10"
-            - "IOTA_OPCUA_SUBSCRIPTION_REQ_PUBLISHING_INTERVAL=1000"
-            - "IOTA_OPCUA_SUBSCRIPTION_PRIORITY=128"
-            - "IOTA_OPCUA_MT_POLLING=false"
-            - "IOTA_OPCUA_MT_AGENT_ID=age01_"
-            - "IOTA_OPCUA_MT_ENTITY_ID=age01_Car"
-            - "IOTA_OPCUA_MT_ENTITY_TYPE=Device"
-            - "IOTA_OPCUA_MT_NAMESPACE_IGNORE=0,7"
-            - "IOTA_OPCUA_MT_STORE_OUTPUT=true"
+            - "IOTA_MQTT_PROTOCOL=mqtt"
+            - "IOTA_MQTT_HOST=mosquitto"
+            - "IOTA_MQTT_PORT=1883"
+            - "IOTA_MQTT_CA="
+            - "IOTA_MQTT_CERT="
+            - "IOTA_MQTT_KEY="
+            - "IOTA_MQTT_REJECT_UNAUTHORIZED=true"
+            - "IOTA_MQTT_USERNAME="
+            - "IOTA_MQTT_PASSWORD="
+            - "IOTA_MQTT_QOS=0"
+            - "IOTA_MQTT_RETAIN=false"
+            - "IOTA_MQTT_RETRIES=5"
+            - "IOTA_MQTT_RETRY_TIME=5"
+            - "IOTA_MQTT_KEEPALIVE=60"
+            - "IOTA_MQTT_AVOID_LEADING_SLASH=false"
+            - "IOTA_MQTT_DISABLED=false"
+            - "IOTA_HTTP_PORT=7896"
+            - "IOTA_HTTP_TIMEOUT=1000"
+            - "IOTA_HTTP_KEY="
+            - "IOTA_HTTP_CERT="
+            - "IOTA_AAS_ENDPOINT=http://localhost:9000/aas"
+            - "IOTA_AAS_MT_AGENT_ID=age01_"
+            - "IOTA_AAS_MT_ENTITY_ID=ticketmgmt01"
+            - "IOTA_AAS_MT_ENTITY_TYPE=TicketManagement"
+            - "IOTA_AAS_MT_STORE_OUTPUT=true"
         volumes:
             - ../conf:/opt/iotagent-aas/conf
 
@@ -115,14 +124,6 @@ services:
             - "1026:1026"
         command: -dbhost mongodb -logLevel DEBUG
 
-    iotcarsrv:
-        hostname: iotcarsrv
-        image: iotagent4fiware/opcuacarsrv:latest
-        networks:
-            - hostnet
-        ports:
-            - "5001:5001"
-
 networks:
     hostnet:
 ```
@@ -135,7 +136,7 @@ environment variables such as those shown below:
 -   `CONFIGURATION_TYPE` - flag indicating which configuration type to perform. Possible choices are: auto, dynamic and
     static
 -   `CONFIG_RETRIEVAL` - flag indicating whether the incoming notifications to the IoTAgent should be processed using
-    the bidirectionality plugin from the latest versions of the library or the OPCUA-specific configuration retrieval
+    the bidirectionality plugin from the latest versions of the library or the AAS-specific configuration retrieval
     mechanism.
 -   `DEFAULT_KEY` - Default API Key, to use with device that have been provisioned without a Configuration Group.
 -   `DEFAULT_TRANSPORT` - Default transport protocol when no transport is provisioned through the Device Provisioning
@@ -167,29 +168,14 @@ environment variables such as those shown below:
 -   `IOTA_EXTENDED_FORBIDDEN_CHARACTERS` - List of characters to be filtered before forwarding any request to the
     Context Broker
 -   `IOTA_AUTOPROVISION` - Flag indicating whether to provision the Group and Device automatically
--   `IOTA_OPCUA_ENDPOINT` - Endpoint of OPC UA Server
--   `IOTA_OPCUA_SECURITY_MODE` - Security mode for OPC UA connection
--   `IOTA_OPCUA_SECURITY_POLICY` - Security policy for OPC UA connection
--   `IOTA_OPCUA_SECURITY_USERNAME` - Username for OPC UA connection
--   `IOTA_OPCUA_SECURITY_PASSWORD` - Password for OPC UA connection
--   `IOTA_OPCUA_UNIQUE_SUBSCRIPTION` - Boolean property to assess whether subscribe once for multiple OPC UA nodes or
+-   `IOTA_AAS_ENDPOINT` - Endpoint of AAS Server
+-   `IOTA_AAS_ENDPOINT` - Endpoint of AAS Server
+-   `IOTA_AAS_ENDPOINT` - Endpoint of AAS Server
+-   `IOTA_AAS_MT_AGENT_ID` - agentId prefix to be assigned to the newly generated entity from MappingTool execution
+-   `IOTA_AAS_MT_ENTITY_ID` - entityId to be assigned to the newly generated entity from MappingTool execution
+-   `IOTA_AAS_MT_ENTITY_TYPE` - entityType to be assigned to the newly generated entity from MappingTool execution
+-   `IOTA_AAS_MT_STORE_OUTPUT` - boolean flag to determine whether to store the output of the mapping tool execution or
     not
--   `IOTA_OPCUA_SUBSCRIPTION_NOTIFICATIONS_PER_PUBLISH` - OPCUA subscription number of notifications per publish
--   `IOTA_OPCUA_SUBSCRIPTION_PUBLISHING_ENABLED` - Boolean property to assess whether enable OPCUA publishing or not
--   `IOTA_OPCUA_SUBSCRIPTION_REQ_LIFETIME_COUNT` - OPCUA subscription lifetime count
--   `IOTA_OPCUA_SUBSCRIPTION_REQ_MAX_KEEP_ALIVE_COUNT` - OPCUA subscription request maximum keep alive count
--   `IOTA_OPCUA_SUBSCRIPTION_REQ_PUBLISHING_INTERVAL` - OPCUA subscription request publishing interval
--   `IOTA_OPCUA_SUBSCRIPTION_PRIORITY` - OPCUA subscription priority
--   `IOTA_EXTENDED_FORBIDDEN_CHARACTERS` - List of characters to be filtered before forwarding any request to Orion.
-    Default Orion forbidden characters are filtered by default, see
-    [here](https://github.com/telefonicaid/fiware-orion/blob/74aaae0c98fb24f082e3b258aa642461eb285e39/doc/manuals/orion-api.md#general-syntax-restrictions)
--   `IOTA_OPCUA_MT_POLLING` - Boolean property to assess whether enable polling in MappingTool or not
--   `IOTA_OPCUA_MT_AGENT_ID` - agentId prefix to be assigned to the newly generated entity from MappingTool execution
--   `IOTA_OPCUA_MT_ENTITY_ID` - entityId to be assigned to the newly generated entity from MappingTool execution
--   `IOTA_OPCUA_MT_ENTITY_TYPE` - entityType to be assigned to the newly generated entity from MappingTool execution
--   `IOTA_OPCUA_MT_NAMESPACE_IGNORE` - Namespaces to ignore when crawling nodes from OPC UA Server
--   `IOTA_OPCUA_MT_STORE_OUTPUT` - boolean flag to determine whether to store the output of the mapping tool execution
-    or not
 
 ### Further Information
 
@@ -197,7 +183,7 @@ The full set of overrides for the general parameters applicable to all IoT Agent
 section of the IoT Agent Library
 [Installation Guide](https://iotagent-node-lib.readthedocs.io/en/latest/installationguide/index.html#configuration).
 
-Further settings for IoT Agent for OPC-UA itself - can be found in the IoT Agent for OPC-UA
+Further settings for IoT Agent for AAS itself - can be found in the IoT Agent for AAS
 [Installation Guide](https://iotagent-aas.readthedocs.io/en/latest/installationguide/index.html#configuration).
 
 ## How to build an image
@@ -315,8 +301,8 @@ refer to the [Installation Guide](https://fiware-iotagent-ul.rtfd.io/en/latest/i
 ### Set-up appropriate Database Indexes
 
 If using Mongo-DB as a data persistence mechanism (i.e. if `IOTA_REGISTRY_TYPE=mongodb`) the device and service group
-details are retrieved from a database. The default name of the IoT Agent database is `iotagentopcua`. Database access
-can be optimized by creating appropriate indices.
+details are retrieved from a database. The default name of the IoT Agent database is `iotagent_aas`. Database access can
+be optimized by creating appropriate indices.
 
 For example:
 

@@ -1,6 +1,6 @@
-# Copyright 2022 Engineering Ingegneria Informatica S.p.A.
+# Copyright 2024 Engineering Ingegneria Informatica S.p.A.
 #
-# This file is part of the IoT Agent for the OPCUA protocol (iotagent-aas) component
+# This file is part of iotagent-aas
 #
 # iotagent-aas is free software: you can redistribute it and/or
 # modify it under the terms of the GNU Affero General Public License as
@@ -14,10 +14,11 @@
 #
 # You should have received a copy of the GNU Affero General Public
 # License along with iotagent-aas.
-# If not, see http://www.gnu.org/licenses/.
+# If not, seehttp://www.gnu.org/licenses/.
 #
 # For those usages not covered by the GNU Affero General Public License
-# please contact with: [manfredi.pistone@eng.it, gabriele.deluca@eng.it, walterdomenico.vergara@eng.it, mattiagiuseppe.marzano@eng.it]
+# please contact with::[manfredi.pistone@eng.it, walterdomenico.vergara@eng.it]
+# /
 
 version: "3.1"
 
@@ -46,13 +47,13 @@ services:
       - "IOTA_CB_PORT=1026"
       - "IOTA_CB_NGSIVERSION=v2"
       - "IOTA_CB_NGSILDCONTEXT=https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-      - "IOTA_CB_SERVICE=opcua_car"
+      - "IOTA_CB_SERVICE=aas_ticket"
       - "IOTA_CB_SUBSERVICE=/demo"
       - "IOTA_NORTH_PORT=4041"
       - "IOTA_REGISTRY_TYPE=mongodb"
       - "IOTA_MONGO_HOST=mongodb"
       - "IOTA_MONGO_PORT=27017"
-      - "IOTA_MONGO_DB=iotagent_opcua"
+      - "IOTA_MONGO_DB=iotagent_aas"
       - "IOTA_SERVICE=aas_ticket"
       - "IOTA_SUBSERVICE=/demo"
       - "IOTA_PROVIDER_URL=http://iotagent-aas:4041"
@@ -87,7 +88,6 @@ services:
       - "IOTA_AAS_MT_ENTITY_ID=ticketmgmt01"
       - "IOTA_AAS_MT_ENTITY_TYPE=TicketManagement"
       - "IOTA_AAS_MT_STORE_OUTPUT=true"
-
     volumes:
       - ../conf:/opt/iotagent-aas/conf
 

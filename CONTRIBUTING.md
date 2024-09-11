@@ -1,27 +1,25 @@
 To get started,
-<a href="https://github.com/Engineering-Research-and-Development/iotagent-aas/blob/master/opc-ua-agent-individual-cla.pdf">sign
+<a href="https://github.com/Engineering-Research-and-Development/iotagent-aas/blob/master/aas-agent-individual-cla.pdf">sign
 the Contributor License Agreement</a>.
 
 # Contributor License Agreement
 
-Thank you for your interest in
-[OPC UA Agent](https://github.com/Engineering-Research-and-Development/iotagent-aas).<br/> In order to clarify both
-the intellectual property license, granted with Contributions from any person, and the contribution management
-guidelines, outlined in order to achieve a project systematic growth, the OPC UA Agent Project must have a Contributor
-License Agreement (or Agreement) that has been accepted by each Contributor, indicating his/her agreement to terms and
-conditions of this Contributor License Agreement.
+Thank you for your interest in [AAS Agent](https://github.com/Engineering-Research-and-Development/iotagent-aas).<br/>
+In order to clarify both the intellectual property license, granted with Contributions from any person, and the
+contribution management guidelines, outlined in order to achieve a project systematic growth, the AAS Agent Project must
+have a Contributor License Agreement (or Agreement) that has been accepted by each Contributor, indicating his/her
+agreement to terms and conditions of this Contributor License Agreement.
 
 This Agreement is for your protection as a Contributor as well as the protection of ENGINEERING Ingegneria Informatica
-S.p.A., which keeps the copyright of OPC UA Agent software and documentation. This does not change your rights to use
-your own Contributions for any other purpose.
+S.p.A., which keeps the copyright of AAS Agent software and documentation. This does not change your rights to use your
+own Contributions for any other purpose.
 
 This Agreement:
 
 -   clarifies that, to your knowledge, the technology you’ve submitted was developed by you and that you have authority
     to provide it;
 -   grants to ENGINEERING Ingegneria Informatica S.p.A. a perpetual, worldwide, no-charge, royalty-free, irrevocable,
-    non-exclusive copyright license to use your Contribution and every derivative work, according to OPC UA Agent
-    license.
+    non-exclusive copyright license to use your Contribution and every derivative work, according to AAS Agent license.
 
 **Please read this document carefully before accepting its terms and conditions.**
 
@@ -29,21 +27,21 @@ This Agreement:
 
 “Contributor” is the copyright owner that is making this Agreement with ENGINEERING Ingegneria Informatica S.p.A.
 
-“Engineering” (ENGINEERING Ingegneria Informatica S.p.A.) is the entity owner of the copyright of OPC UA Agent software
-and documentation.
+“Engineering” (ENGINEERING Ingegneria Informatica S.p.A.) is the entity owner of the copyright of AAS Agent software and
+documentation.
 
-“OPC UA Agent Project” or “Project” shall mean every organization, procedure, mean, practice, term, condition and
-license, used by ENGINEERING Ingegneria Informatica S.p.A. for the aim of the free/open source OPC UA Agent project
-development by means of all its software components and documentation which are pointed out on the project site:
+“AAS Agent Project” or “Project” shall mean every organization, procedure, mean, practice, term, condition and license,
+used by ENGINEERING Ingegneria Informatica S.p.A. for the aim of the free/open source AAS Agent project development by
+means of all its software components and documentation which are pointed out on the project site:
 https://github.com/Engineering-Research-and-Development/iotagent-aas
 
 “Contribution” shall mean any original work of authorship, including any modifications or additions to an existing work,
-which is intentionally submitted by the Contributor to ENGINEERING for inclusion in OPC UA Agent software or
-documentation. For the purpose of this definition, “submitted” means any form of electronic, verbal or written
-communication sent to ENGINEERING, including but not limited to communication on electronic mailing lists, source code
-control systems and issue tracking systems that are managed by ENGINEERING for the purpose of discussing and improving
-OPC UA Agent software and documentation, but excluding the communication that is conspicuously marked or otherwise
-designated in writing by the Contributor as “Not a Contribution”.
+which is intentionally submitted by the Contributor to ENGINEERING for inclusion in AAS Agent software or documentation.
+For the purpose of this definition, “submitted” means any form of electronic, verbal or written communication sent to
+ENGINEERING, including but not limited to communication on electronic mailing lists, source code control systems and
+issue tracking systems that are managed by ENGINEERING for the purpose of discussing and improving AAS Agent software
+and documentation, but excluding the communication that is conspicuously marked or otherwise designated in writing by
+the Contributor as “Not a Contribution”.
 
 ## Acceptance and Termination procedure
 
@@ -56,7 +54,7 @@ To contribute, the Contributor must accept this Contributor License Agreement an
 Agreement. Otherwise, ENGINEERING Ingegneria Informatica S.p.A. will not consider his/her Contribution.
 
 A Developer who has sent Contributions in solid, useful source code and/or documentation and who asked to be a
-Contributor will be add to our Contributor List published on OPC UA Agent website. ENGINEERING will notify to the
+Contributor will be add to our Contributor List published on AAS Agent website. ENGINEERING will notify to the
 Contributor via email his/her elevation to Contributor status.
 
 ENGINEERING can exclude a Contributor from the Contributors list, by its exclusive right, when this Contributor has not
@@ -67,10 +65,10 @@ communication that ENGINEERING will send to the Contributor, starting from the d
 ## Contributor’s responsibility
 
 The Contributor owns and has the rights to contribute all source code and related material, intended to be compiled or
-integrated with the source code for OPC UA Agent software and documentation which the Contributor has ever delivered,
-and the Project has accepted, for incorporation into the technology, made available under the OPC UA Agent Project.
+integrated with the source code for AAS Agent software and documentation which the Contributor has ever delivered, and
+the Project has accepted, for incorporation into the technology, made available under the AAS Agent Project.
 
-The Contributor grants to comply with the applicable laws and regulations, the OPC UA Agent license terms of use and the
+The Contributor grants to comply with the applicable laws and regulations, the AAS Agent license terms of use and the
 guiding principles concerning any use of copyrighted materials.
 
 This project is released with [Contributor Code of Conduct](./CODE_OF_CONDUCT.md). By participating in this project, you
@@ -80,7 +78,7 @@ agree to abide by its terms.
 
 Subject to the terms and conditions of this Agreement, the Contributor grants to ENGINEERING Ingegneria Informatica
 S.p.A. a perpetual, worldwide, no-charge, royalty-free, irrevocable, non-exclusive copyright license to use the
-Contribution and every derivative work, according to OPC UA Agent License.
+Contribution and every derivative work, according to AAS Agent License.
 
 The Contributor represents that s/he is legally entitled to grant the above assignment.
 
@@ -107,9 +105,9 @@ Before we get started, here are a few things we expect from you (and that you sh
 
 If you'd like to contribute, start by searching through the
 [issues](https://github.com/Engineering-Research-and-Development/iotagent-aas/issues) and
-[pull requests](https://github.com/Engineering-Research-and-Development/iotagent-aas/pulls) to see whether someone
-else has raised a similar idea or question. In adition, you can also check in the IoTAgent Node Lib framework repository
-for [issues](https://github.com/telefonicaid/iotagent-node-lib/issues) and
+[pull requests](https://github.com/Engineering-Research-and-Development/iotagent-aas/pulls) to see whether someone else
+has raised a similar idea or question. In adition, you can also check in the IoTAgent Node Lib framework repository for
+[issues](https://github.com/telefonicaid/iotagent-node-lib/issues) and
 [pull requests](https://github.com/telefonicaid/iotagent-node-lib/pulls) across all the IoT-Agents
 
 If you don't see your idea listed, and you think it fits into the goals of this guide, do one of the following:
@@ -178,8 +176,8 @@ In order to start contributing:
 git clone https://github.com/Engineering-Research-and-Development/iotagent-aas.git
 ```
 
-3.  Add the main iotagent-aas repository as a remote to your forked repository (use any name for your remote
-    repository, it does not have to be iotagent-aas, although we will use it in the next steps):
+3.  Add the main iotagent-aas repository as a remote to your forked repository (use any name for your remote repository,
+    it does not have to be iotagent-aas, although we will use it in the next steps):
 
 ```bash
 git remote add iotagent-aas https://github.com/Engineering-Research-and-Development/iotagent-aas.git

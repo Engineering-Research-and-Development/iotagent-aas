@@ -1,5 +1,5 @@
 {
-    "enabler": "OPC UA IoTAgent",
+    "enabler": "AAS IoTAgent",
     "chapter": "iotagents",
     "academy": "iot-agents/idas",
     "readthedocs": "iotagent-aas",
