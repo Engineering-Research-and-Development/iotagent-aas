@@ -83,6 +83,10 @@ services:
       - "IOTA_HTTP_KEY="
       - "IOTA_HTTP_CERT="
       - "IOTA_AAS_ENDPOINT=http://localhost:9000/aas"
+      - "IOTA_AAS_MT_AGENT_ID=age01_"
+      - "IOTA_AAS_MT_ENTITY_ID=ticketmgmt01"
+      - "IOTA_AAS_MT_ENTITY_TYPE=TicketManagement"
+      - "IOTA_AAS_MT_STORE_OUTPUT=true"
 
     volumes:
       - ../conf:/opt/iotagent-aas/conf

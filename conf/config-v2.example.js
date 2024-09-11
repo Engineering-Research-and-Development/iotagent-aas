@@ -324,7 +324,7 @@ config.iota = {
     /**
      * Default type, for IoT Agent installations that won't require preregistration.
      */
-    defaultType: 'Device',
+    defaultType: 'TicketManagement',
     /**
      * Default resource of the IoT Agent. This value must be different for every IoT Agent connecting to the IoT
      * Manager.
@@ -350,6 +350,25 @@ config.aas = {
      * Endpoint where the IoT Agent will listen for an active AAS Server.
      */
     endpoint: 'http://localhost:9000/aas'
+};
+
+config.mappingTool = {
+    /**
+     * agentId prefix to be assigned to the newly generated entity from MappingTool execution
+     */
+    agentId: 'age01_',
+    /**
+     * entityId to be assigned to the newly generated entity from MappingTool execution
+     */
+    entityId: 'ticketmgmt01',
+    /**
+     * entityType to be assigned to the newly generated entity from MappingTool execution
+     */
+    entityType: 'TicketManagement',
+    /**
+     * boolean flag to determine whether to store the output of the mapping tool execution or not
+     */
+    storeOutput: true
 };
 
 /**

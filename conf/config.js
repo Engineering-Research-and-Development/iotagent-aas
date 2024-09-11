@@ -285,7 +285,7 @@ config.iota = {
     /**
      * Default type, for IoT Agent installations that won't require preregistration.
      */
-    defaultType: 'Device',
+    defaultType: 'TicketManagement',
     /**
      * Default resource of the IoT Agent. This value must be different for every IoT Agent connecting to the IoT
      * Manager.
@@ -312,6 +312,34 @@ config.aas = {
      */
     endpoint: 'http://localhost:9000/aas'
 };
+
+config.mappingTool = {
+    /**
+     * agentId prefix to be assigned to the newly generated entity from MappingTool execution
+     */
+    agentId: 'age01_',
+    /**
+     * entityId to be assigned to the newly generated entity from MappingTool execution
+     */
+    entityId: 'TicketManagement',
+    /**
+     * entityType to be assigned to the newly generated entity from MappingTool execution
+     */
+    entityType: 'TicketManagement',
+    /**
+     * boolean flag to determine whether to store the output of the mapping tool execution or not
+     */
+    storeOutput: true
+};
+
+/**
+ * Flag indicating which configuration type to perform. Possible choices are:
+ *  - auto : mappingTool will be run and runtime device mappings will be loaded
+ *  - dynamic : device mappings from config.js will be ignored, REST API Provisioning is mandatory
+ *  - static : device mappings from config.js will be loaded
+ */
+
+config.configurationType = 'auto';
 
 /**
  * map {name: function} of extra transformations avaliable at JEXL plugin
