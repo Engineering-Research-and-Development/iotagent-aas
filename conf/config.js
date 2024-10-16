@@ -310,7 +310,11 @@ config.aas = {
     /**
      * Endpoint where the IoT Agent will listen for an active AAS Server.
      */
-    endpoint: 'http://localhost:9000/aas'
+    endpoint: 'http://localhost:8081',
+    /**
+     * Version of the aas API that the agent will interact with
+     */
+    api_version: 'v1'
 };
 
 config.mappingTool = {
