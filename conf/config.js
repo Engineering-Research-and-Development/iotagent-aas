@@ -303,7 +303,11 @@ config.iota = {
     /**
      * Flag indicating whether to provision the Group and Device automatically
      */
-    autoprovision: true
+    autoprovision: true,
+    /**
+     * Max dimension for payloads sent to the agent
+     */
+    expressLimit: '1mb'
 };
 
 config.aas = {
@@ -314,7 +318,7 @@ config.aas = {
     /**
      * Version of the aas API that the agent will interact with
      */
-    api_version: 'v1'
+    api_version: 'v2'
 };
 
 config.mappingTool = {
