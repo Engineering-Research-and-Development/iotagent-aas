@@ -368,7 +368,11 @@ config.mappingTool = {
     /**
      * boolean flag to determine whether to store the output of the mapping tool execution or not
      */
-    storeOutput: true
+    storeOutput: true,
+    /**
+     * character to be used as separator between nodes in the attribute names
+     */
+    attrSeparatorCharacter: '__'
 };
 
 /**

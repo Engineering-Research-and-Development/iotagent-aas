@@ -88,6 +88,7 @@ services:
       - "IOTA_AAS_MT_ENTITY_ID=ticketmgmt01"
       - "IOTA_AAS_MT_ENTITY_TYPE=TicketManagement"
       - "IOTA_AAS_MT_STORE_OUTPUT=true"
+      - "IOTA_AAS_MT_ATTR_SEPARATOR_CHARACTER=__"
     volumes:
       - ../conf:/opt/iotagent-aas/conf
 
