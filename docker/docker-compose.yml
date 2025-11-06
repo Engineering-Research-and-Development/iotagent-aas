@@ -145,7 +145,7 @@ services:
     ports:
       - "1026:1026"
     command: -dbhost mongodb -logLevel DEBUG
-    #command: -dbhost mongodb -logLevel DEBUG -mongocOnly -forwarding
+    #command: -dbhost mongodb -logLevel DEBUG -mongocOnly -forwarding -experimental
 
   iotcarsrv:
     hostname: iotcarsrv
