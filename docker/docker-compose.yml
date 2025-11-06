@@ -92,6 +92,37 @@ services:
     volumes:
       - ../conf:/opt/iotagent-aas/conf
 
+  iotagent-ui-spa:
+    hostname: iotagent-ui-spa
+    image: iotagent-ui-spa
+    depends_on:
+      - iotagent-ui-bff
+    networks:
+      - hostnet
+    ports:
+      - "80:80"
+    environment:
+      - "BFF_API_HOST=localhost"
+      - "BFF_API_PORT=9000"
+
+  iotagent-ui-bff:
+    hostname: iotagent-ui-bff
+    image: iotagent-ui-bff
+    depends_on:
+      - mongodb
+    networks:
+      - hostnet
+    ports:
+      - "9000:9000"
+    environment:
+      - "NODE_ENV=true"
+      - "PORT=9000"
+      - "MONGO_HOST=mongodb"
+      - "MONGO_PORT=27017"
+      - "MONGO_DB=iotagent_ui"
+      - "AUTH_SECRET=secret"
+      - "ADMIN_ACCOUNT=true"
+
   mongodb:
     image: mongo:4.2
     hostname: mongodb
