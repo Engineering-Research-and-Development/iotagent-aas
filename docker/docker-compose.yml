@@ -45,7 +45,7 @@ services:
       - "IOTA_TIMESTAMP=true"
       - "IOTA_CB_HOST=orion"
       - "IOTA_CB_PORT=1026"
-      - "IOTA_CB_NGSIVERSION=v2"
+      - "IOTA_CB_NGSIVERSION=ld"
       - "IOTA_CB_NGSILDCONTEXT=https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
       - "IOTA_CB_SERVICE=aas_ticket"
       - "IOTA_CB_SUBSERVICE=/demo"
@@ -92,36 +92,6 @@ services:
     volumes:
       - ../conf:/opt/iotagent-aas/conf
 
-  iotagent-ui-spa:
-    hostname: iotagent-ui-spa
-    image: iotagent-ui-spa
-    depends_on:
-      - iotagent-ui-bff
-    networks:
-      - hostnet
-    ports:
-      - "80:80"
-    environment:
-      - "BFF_API_HOST=localhost"
-      - "BFF_API_PORT=9000"
-
-  iotagent-ui-bff:
-    hostname: iotagent-ui-bff
-    image: iotagent-ui-bff
-    depends_on:
-      - mongodb
-    networks:
-      - hostnet
-    ports:
-      - "9000:9000"
-    environment:
-      - "NODE_ENV=true"
-      - "PORT=9000"
-      - "MONGO_HOST=mongodb"
-      - "MONGO_PORT=27017"
-      - "MONGO_DB=iotagent_ui"
-      - "AUTH_SECRET=secret"
-      - "ADMIN_ACCOUNT=true"
 
   mongodb:
     image: mongo:4.2
@@ -145,7 +115,15 @@ services:
     ports:
       - "1026:1026"
     command: -dbhost mongodb -logLevel DEBUG
-    #command: -dbhost mongodb -logLevel DEBUG -forwarding -experimental
+    #command: -dbhost mongodb -logLevel DEBUG -mongocOnly -forwarding
+
+  iotcarsrv:
+    hostname: iotcarsrv
+    image: iotagent4fiware/opcuacarsrv:latest
+    networks:
+      - hostnet
+    ports:
+      - "5001:5001"
 
 networks:
   hostnet:
