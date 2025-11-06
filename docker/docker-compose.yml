@@ -45,7 +45,7 @@ services:
       - "IOTA_TIMESTAMP=true"
       - "IOTA_CB_HOST=orion"
       - "IOTA_CB_PORT=1026"
-      - "IOTA_CB_NGSIVERSION=ld"
+      - "IOTA_CB_NGSIVERSION=v2"
       - "IOTA_CB_NGSILDCONTEXT=https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
       - "IOTA_CB_SERVICE=aas_ticket"
       - "IOTA_CB_SUBSERVICE=/demo"
@@ -91,7 +91,6 @@ services:
       - "IOTA_AAS_MT_ATTR_SEPARATOR_CHARACTER=__"
     volumes:
       - ../conf:/opt/iotagent-aas/conf
-
 
   mongodb:
     image: mongo:4.2
