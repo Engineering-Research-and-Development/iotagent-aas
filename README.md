@@ -90,7 +90,7 @@ Further Information about how to install the AAS IoT Agent can be found at the c
 ## Usage
 
 Information about how to use the IoT Agent can be found in the
-[User & Programmers Manual](https://iotagent-aas.readthedocs.io/en/latest/user_and_programmers_manual).
+[User & Programmers Manual](./docs/user_and_programmers_manual.md).
 
 ### Administration Services
 
