@@ -195,9 +195,7 @@ curl --location 'http://localhost:4041/iot/devices' \
                               "ocb_id": "BatteryAAS_BillOfMaterials_Battery_MaterialInformation_RecycableMaterial",
                               "submodel_element_short_id": "RecycableMaterial"
                           }
-                      ],
-                      "service": "aas_ticket",
-                      "subservice": "/demo"
+                      ]
                   }
               ]
           }
