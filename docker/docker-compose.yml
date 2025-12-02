@@ -145,7 +145,15 @@ services:
     ports:
       - "1026:1026"
     command: -dbhost mongodb -logLevel DEBUG
-    #command: -dbhost mongodb -logLevel DEBUG -forwarding -experimental
+    #command: -dbhost mongodb -logLevel DEBUG -mongocOnly -forwarding -experimental
+
+  iotcarsrv:
+    hostname: iotcarsrv
+    image: iotagent4fiware/opcuacarsrv:latest
+    networks:
+      - hostnet
+    ports:
+      - "5001:5001"
 
 networks:
   hostnet:
